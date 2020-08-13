@@ -1,21 +1,22 @@
 public class Main {
   public static void main(String[] args) {
-    String s1 = "スッキリJava";
-    String s2 = "Java";
-    String s3 = "java";
-    // 内容が等しいか
-    if (s2.equals(s3)) {
-      System.out.println("s2とs3は等しい");
+    String s1 = "Java and JavaScript";
+    // 15-2-2 文字列を検索する
+    if (s1.contains("Java")) {
+      System.out.println("文字列s1は、Javaを含んでいます");
     }
-    // 大文字小文字を区別せず内容が等しいか調べる
-    if (s2.equalsIgnoreCase(s3)) {
-      System.out.println("s2とs3はケースを区別しなければ等しい");
+    if (s1.endsWith("Java")) {
+      System.out.println("文字列s1は、Javaが末尾にあります");
     }
-    // length文字列長を調べる（全角文字も半角文字も一文字としてカウント）
-    System.out.println("s1の長さは" + s1.length() + "です");
-    // 空文字か（length()==0)
-    if (s1.isEmpty()) {
-      System.out.println("s1は空文字です");
-    }
+    System.out.println("文字列s1で最初にJavaが登場する位置は" + s1.indexOf("Java")); // 0
+    System.out.println("文字列s1で最後にJavaが登場する位置は" + s1.lastIndexOf("Java")); // 9
+
+    // 15-2-3 文字を切り出す
+    String s2 = "Java programming";
+    // 先頭位置は0
+    System.out.println("文字列s2の４文字目以降は" + s2.substring(3));
+    // =>"a programming"
+    System.out.println("文字列s2の４〜８文字目は" + s2.substring(3, 8));
+    // =>"a pro"
   }
 }
