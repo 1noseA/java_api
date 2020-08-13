@@ -1,16 +1,11 @@
+import java.util.Date;
+
 public class Main {
   public static void main(String[] args) {
-    String s = "abc,def:ghi";
-    String[] words = s.split("[,:]");
-    for (String w : words) {
-      System.out.print(w + "->");
-    }
-
-    String w = s.replaceAll("[beh]", "X");
-    System.out.println(w);
+   Date now = new Date();
+   System.out.println(now);
+   System.out.println(now.getTime());
+   Date past = new Date(1600705425827L);
+   System.out.println(past);
   }
-
-  // public boolean isValidPlayerName(String name) {
-  //   return name.matches("[A-Z][A-Z0-9]{7}");
-  // }
 }
