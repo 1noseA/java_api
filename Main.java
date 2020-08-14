@@ -1,16 +1,15 @@
-import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
   public static void main(String[] args) {
-    Set<String> colors = new HashSet<String>();
-    colors.add("赤");
-    colors.add("青");
-    colors.add("黄");
-    // colors.add("赤");
-    // System.out.println("色は" + colors.size() + "種類"); // 3種類になる
-
-    for (String s : colors) {
+    // 自然順序づけ（辞書順）
+    Set<String> words = new TreeSet<String>();
+    words.add("dog");
+    words.add("cat");
+    words.add("wolf");
+    words.add("panda");
+    for (String s : words) {
       System.out.print(s + "→");
     }
   }
